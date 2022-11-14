@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Componente from "./components/Componente";
 import './App.css';
 import Propiedades from "./components/Propiedades";
+import Estado from "./components/Estado";
 
 function App() {
 
@@ -36,6 +37,8 @@ function App() {
           funcion = {num => num*num}
           componenteReact = {<Componente msg="Soy un componente pasado como prop"/>}
         />
+        <hr/>
+        <Estado/>
       </section>
       </header>
     </div>
