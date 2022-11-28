@@ -75,3 +75,46 @@
           );
       }
     }
+
+    /*function Boton(props){
+      return <button onClick={props.myOnClick}>Botón Hecho componente</button>;
+    }*/
+
+    /*const Boton = (props) =>{
+      <button onClick={props.myOnClick}>Botón Hecho componente</button>;
+     };*/
+    const Boton = ({myOnClick}) =>(
+      <button onClick={myOnClick}>Botón Hecho componente</button>
+    );
+
+    export class MasSobreEventos extends Component{
+      handleClick = (e,mensaje) =>{
+        console.log(e);
+        console.log(e.nativeEvent)
+        console.log(e.target);
+        console.log(e.nativeEvent.target)
+        console.log(mensaje)
+      }
+      render(){
+        return(
+          <div>
+            <h2>Mas sobre eventos</h2>
+            <button onClick = {(e)=>
+              this.handleClick(e,"Hola pasando parámetros desde un evento")
+              }
+              >
+               Saludar
+              </button>
+              {/*Evento Personalizado*/}
+              {/*<Boton onClick = {(e)=>
+              this.handleClick(e,"Hola pasando parámetros desde un evento")
+              }
+            />*/}
+              <Boton myOnClick = {(e)=>
+              this.handleClick(e,"Hola pasando parámetros desde un evento")
+              }
+              />
+          </div>
+        )
+      }
+    }
