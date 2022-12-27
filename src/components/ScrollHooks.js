@@ -6,28 +6,28 @@ export default function ScrollHooks (){
   
 
   useEffect(() => {
-    console.log("Moviendo el Scroll")
+    //console.log("Moviendo el Scroll")
     const detectarScroll = () => setScrollY(window.pageYOffset);
     
     window.addEventListener("scroll",detectarScroll);
 
     return ()=>{
       window.removeEventListener("scroll",detectarScroll);
-      console.log("Fase de Desmontaje")
+      //console.log("Fase de Desmontaje")
     }
   },[scrollY]);
 
   useEffect(()=>{
-    console.log("fase de Montaje")
+    //console.log("fase de Montaje")
   },[]);
   
   useEffect(()=>{
-    console.log("Fase de Actualización")
+    //console.log("Fase de Actualización")
   });
 
   useEffect(()=>{
     return() =>{
-      console.log("Fase de Desmontaje")
+      //console.log("Fase de Desmontaje")
     };
   });
   return(
